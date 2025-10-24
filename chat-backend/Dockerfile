@@ -12,4 +12,5 @@ ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/po
 RUN unzip pocketbase_*.zip
 
 # Railway $PORT variable ka istemaal karke server ko start karein
-CMD ["./pocketbase", "serve", "--http=0.0.0.0:$PORT"]
+
+CMD ./pocketbase", "serve", "--http=0.0.0.0:$PORT
