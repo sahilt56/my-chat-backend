@@ -15,12 +15,12 @@ migrate((app) => {
     "type": "editor"
   }))
 
-  return app.save(collection)
+  return app.dao().saveCollection(collection);
 }, (app) => {
   const collection = app.findCollectionByNameOrId("pbc_3861817060")
 
   // remove field
   collection.fields.removeById("editor761796623")
 
-  return app.save(collection)
+  return app.dao().saveCollection(collection);
 })
