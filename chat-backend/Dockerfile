@@ -13,4 +13,5 @@ RUN unzip pocketbase_*.zip
 
 # Railway $PORT variable ka istemaal karke server ko start karein
 
-CMD ./pocketbase", "serve", "--http=0.0.0.0:$PORT
+CMD ["/bin/sh", "-c", "./pocketbase serve --http=0.0.0.0:$PORT"]
+
