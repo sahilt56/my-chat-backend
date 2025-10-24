@@ -17,12 +17,12 @@ migrate((app) => {
     "type": "relation"
   }))
 
-  return app.save(collection)
+  return app.dao().saveCollection(collection);
 }, (app) => {
   const collection = app.findCollectionByNameOrId("pbc_3861817060")
 
   // remove field
   collection.fields.removeById("relation1902735506")
 
-  return app.save(collection)
+  return app.dao().saveCollection(collection);
 })
